@@ -3,7 +3,7 @@ Maintainer: Jelle van der Waa <jelle@archlinux.org>
 Section: misc
 Priority: optional
 Standards-Version: 3.9.2
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper-compat (=11),
                gettext,
                libarchive-dev,
                libcurl4-openssl-dev,
