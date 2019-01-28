@@ -1,0 +1,17 @@
+Source: pacman
+Maintainer: Jelle van der Waa <jelle@archlinux.org>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9),
+               gettext,
+               libarchive-dev,
+               libcurl4-openssl-dev,
+               libgpgme-dev,
+               asciidoc,
+               pkgconf,
+
+Package: pacman
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libarchive13, curl, libgpgme11
+Description: The pacman package manager.
