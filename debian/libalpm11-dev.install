@@ -1,2 +1,4 @@
+usr/lib/*/libalpm.so
+usr/lib/*/pkgconfig/libalpm.pc
 usr/include/alpm.h
 usr/include/alpm_list.h
