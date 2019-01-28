@@ -1,0 +1,9 @@
+usr/bin/*
+usr/include/alpm.h
+usr/include/alpm_list.h
+
+# libalpm
+usr/lib/x86_64-linux-gnu/libalpm.so*
+
+# man pages
+usr/share/man/
