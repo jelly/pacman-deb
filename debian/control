@@ -9,12 +9,22 @@ Build-Depends: debhelper-compat (=11),
                libcurl4-openssl-dev,
                libgpgme-dev,
                asciidoc,
-               pkgconf,
+               pkg-config,
                libssl-dev,
                python,
                libxdelta2-dev,
 
 Package: pacman
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libarchive13, curl, libgpgme11
+Depends: ${shlibs:Depends}, ${misc:Depends}, libarchive13, curl, libgpgme11, libalpm11
 Description: The pacman package manager.
+
+Package: libalpm11
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Arch Linux Package Management library
+
+Package: libalpm11-dev
+Architecture: any
+Depends: ${misc:Depends}, pkg-config
+Description: development files for libalpm (Arch Linux Package Management) library
