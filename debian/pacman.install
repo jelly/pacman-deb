@@ -1,12 +1,5 @@
 usr/bin/*
 
-# move to libalpm-dev
-usr/include/alpm.h
-usr/include/alpm_list.h
-
-# move to libalpm
-usr/lib/x86_64-linux-gnu/libalpm.so*
-
 # docs
 usr/share/pacman
 
