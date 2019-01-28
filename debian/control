@@ -17,14 +17,28 @@ Build-Depends: debhelper-compat (=11),
 Package: pacman
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libarchive13, curl, libgpgme11, libalpm11
-Description: The pacman package manager.
+Suggests: xdelta
+Description: pacman package manager is a simple package manager most commonly
+ used in Arch Linux.
+ .
+ pacman supports the installation of .pkg.tar.xz packages with dependency resolving.
 
 Package: libalpm11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Arch Linux Package Management library
+Description: Arch Linux Package Management library.
+ .
+ libalpm is simple library to interface with the package database and other
+ pacman package related operations.
 
 Package: libalpm11-dev
 Architecture: any
 Depends: ${misc:Depends}, pkg-config
-Description: development files for libalpm (Arch Linux Package Management) library
+Description: development files for libalpm (Arch Linux Package Management)
+ library.
+ .
+ libalpm is simple library to interface with the package database and other
+ pacman package related operations.
+ .
+ This package provides the development files (ie. includes, pkg-config file)
+ that allow one to build software which uses libalpm.
