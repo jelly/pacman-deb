@@ -13,6 +13,7 @@ Build-Depends: debhelper-compat (=11),
                libssl-dev,
                python,
                libxdelta2-dev,
+               fakechroot,
 
 Package: pacman
 Architecture: any
