@@ -22,3 +22,4 @@ pacman-*.tar.gz
 root
 stamp-h1
 tags
+.pc
