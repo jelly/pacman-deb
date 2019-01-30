@@ -15,10 +15,11 @@ Build-Depends: debhelper-compat (=11),
                libxdelta2-dev,
                fakechroot,
                curl,
+               gawk,
 
 Package: pacman
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libarchive13, curl, libgpgme11, libalpm11, libcurl4-openssl, libssl1.1
+Depends: ${shlibs:Depends}, ${misc:Depends}, curl, gawk, libalpm11
 Suggests: xdelta
 Description: pacman package manager is a simple package manager most commonly
  used in Arch Linux.
