@@ -1,0 +1,42 @@
+change awk to gawk since pacman expects it to be gawk and does not support
+other awk implementations.
+--- a/scripts/completion/bash_completion.in
++++ b/scripts/completion/bash_completion.in
+@@ -28,7 +28,7 @@
+ }
+ 
+ _pacman_keyids() {
+-  \pacman-key --list-keys 2>/dev/null | awk '
++  \pacman-key --list-keys 2>/dev/null | gawk '
+     $1 == "pub" {
+       # key id
+       split($2, a, "/"); print a[2]
+--- a/scripts/completion/zsh_completion.in
++++ b/scripts/completion/zsh_completion.in
+@@ -580,7 +580,7 @@
+ 
+ _keys() {
+ 	local keylist keys
+-	keylist=$(pacman-key --list-keys 2>/dev/null | awk '
++	keylist=$(pacman-key --list-keys 2>/dev/null | gawk '
+ 		$1 == "pub" {
+ 			# key id
+ 			split($2, a, "/"); print a[2]
+--- a/scripts/library/human_to_size.sh
++++ b/scripts/library/human_to_size.sh
+@@ -1,5 +1,5 @@
+ human_to_size() {
+-  awk -v human="$1" '
++  gawk -v human="$1" '
+   function trim(s) {
+     gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
+     return s
+--- a/scripts/library/size_to_human.sh
++++ b/scripts/library/size_to_human.sh
+@@ -1,5 +1,5 @@
+ size_to_human() {
+-	awk -v size="$1" '
++	gawk -v size="$1" '
+ 	BEGIN {
+ 		suffix[1] = "B"
+ 		suffix[2] = "KiB"
