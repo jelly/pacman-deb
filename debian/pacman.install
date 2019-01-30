@@ -1,0 +1,22 @@
+usr/bin/*
+
+# docs
+usr/share/pacman
+
+# zsh / bash completion
+usr/share/zsh
+#usr/share/bash-completion
+
+# etc
+etc/makepkg.conf
+etc/pacman.conf
+
+# man pages
+usr/share/man
+
+# makepkg
+usr/share/makepkg
+usr/share/makepkg-template/
+
+# locales
+usr/share/locale

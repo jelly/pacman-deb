@@ -3,15 +3,45 @@ Maintainer: Jelle van der Waa <jelle@archlinux.org>
 Section: misc
 Priority: optional
 Standards-Version: 3.9.2
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper-compat (=11),
                gettext,
                libarchive-dev,
                libcurl4-openssl-dev,
                libgpgme-dev,
                asciidoc,
-               pkgconf,
+               pkg-config,
+               libssl-dev,
+               python,
+               libxdelta2-dev,
+               fakechroot,
+               curl,
+               gawk,
 
 Package: pacman
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libarchive13, curl, libgpgme11
-Description: The pacman package manager.
+Depends: ${shlibs:Depends}, ${misc:Depends}, curl, gawk, libalpm11
+Suggests: xdelta
+Description: pacman package manager is a simple package manager most commonly
+ used in Arch Linux.
+ .
+ pacman supports the installation of .pkg.tar.xz packages with dependency resolving.
+
+Package: libalpm11
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Arch Linux Package Management library.
+ .
+ libalpm is simple library to interface with the package database and other
+ pacman package related operations.
+
+Package: libalpm11-dev
+Architecture: any
+Depends: ${misc:Depends}, pkg-config
+Description: development files for libalpm (Arch Linux Package Management)
+ library.
+ .
+ libalpm is simple library to interface with the package database and other
+ pacman package related operations.
+ .
+ This package provides the development files (ie. includes, pkg-config file)
+ that allow one to build software which uses libalpm.
